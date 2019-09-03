@@ -33,8 +33,8 @@ function insertAllstudents(postdata) {
             var transporter = nodemailer.createTransport({
               service: 'gmail',
               auth: {
-                    user: 'muniraj.rajammal@gmail.com',
-                    pass: 'mathammal143muni'
+                    user: 'Enter your email',
+                    pass: 'Enter your passWord'
               }
             })
             const mailOptions = {

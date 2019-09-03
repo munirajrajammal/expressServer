@@ -2,7 +2,6 @@ const express=require('express');
 const cors = require('cors');
 const mysql=require('mysql');
 var jwt = require('jsonwebtoken');
-// var session = require('express-session')
 
 const app=express();
 const port=4000;
@@ -28,16 +27,7 @@ global.db= db;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
-// app.use(session({
-//   key: 'mathammalmuniraj',
-//   secret: 'somerandonstuffs',
-//   resave: false,
-//   saveUninitialized: false,
-//   cookie: {
-//       expires: 600000
-//   }
-// }));
-// app.use(session({secret: 'mathammalmuniraj'}));
+
 app.use('/register',require('./controller/registerController'))
 app.use('/activeToken',require('./controller/activeController'))
 app.use('/loginFormData',require('./controller/loginController'))
