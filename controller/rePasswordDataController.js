@@ -9,7 +9,6 @@ router.post('/', rePassUpdate)
 
 
 async function rePassUpdate(req,res,next){
-  // console.log('inside the active token controller')
   console.log('the active data inside re password token controller........', req.body)
   studentService.ActiveRePassword(req.body).then((result)=>{
       console.log('the back end responce of successs message ........', result)

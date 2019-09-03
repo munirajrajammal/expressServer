@@ -1,13 +1,9 @@
 studentService=require('../services/studentserves');
 router = require('express').Router();
-// const bcrypt=require('bcrypt');
 
 module.exports = router;
 router.get('/', getAllstudents);
-// router.get('/:id',getstudentsByid)
 router.post('/', Insertstudents)
-// router.put('/:id', Updatestudents)
-// router.delete('/:id', Deletestudents)
 router.get('/verifyEmail/:registertoken', ActivedloginEmail)
 
 async function getAllstudents(req, res, next) {
