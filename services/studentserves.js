@@ -38,7 +38,7 @@ function insertAllstudents(postdata) {
               }
             })
             const mailOptions = {
-              from: 'muniraj.rajammal@gmail.com',
+              from: 'Enter your email',
               to: postdata.email,
               subject: 'Actived the mail link',
               text: 'Visit this http://localhost:3000/verifyEmail'+registertoken,
@@ -137,12 +137,12 @@ function forgotPassWord (postdata) {
           var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                  user: 'muniraj.rajammal@gmail.com',
-                  pass: 'mathammal143muni'
+                  user: 'Enter your email',
+                  pass: 'Enter your password'
             }
           })
           const mailOptions = {
-            from: 'muniraj.rajammal@gmail.com',
+            from: 'Enter your email',
             to: postdata.email,
             subject: 'Actived the mail link',
             text: 'Visit this http://localhost:3000/verifyPassword'+passwordToken,
